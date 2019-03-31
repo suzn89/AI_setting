@@ -1,0 +1,24 @@
+// Break Point
+$desktop-width: 1920px;
+$basic-width: 1200px;
+//$tablet-s-width: 768px;
+// $mob-l-width: 640px; 모바일지원안함
+// $mob-m-width: 425px; 모바일지원안함
+// $mob-s-width: 320px; 모바일지원안함
+
+// only PC
+@mixin pc-only {
+	@media screen and (min-width: $basic-width + 1) {
+		@content;
+	}
+}
+// PC large
+@mixin pc-large {
+	@media screen and (min-width: $desktop-width + 1) {
+		@content;
+	}
+}
+ 
+// --------------------------------------------------
+ 
+

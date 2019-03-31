@@ -1,0 +1,208 @@
+@import 'mixin.scss';
+$primaryColor:#407ceb;
+$secondaryColor:#ffb549;
+$tertiaryColor:#58c9b9;
+$warningColor:#ff5f7c;
+$backgroundColor:#f6f7fb;
+$lightGray:#e5e5e5;
+$subColor1:#b0b1b3;
+$subColor2:#30333a;
+@mixin iconFont {
+  font-family:'aibox';
+}
+@mixin boxShadow {
+  -moz-box-shadow:0px 5px 10px #b0b1b3;
+  -webkit-box-shadow:0px 5px 10px #b0b1b3;
+  box-shadow:0px 5px 10px #b0b1b3;
+}
+@mixin boxSizing {
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-sizing:border-box;
+  box-sizing:border-box;
+}
+@mixin boxRound8 {
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
+@mixin transition {
+  transition:all 0.3s ease-in-out 0.1s;
+}
+
+#login__box {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  width:440px;
+  height:520px;
+  padding:80px 55px;
+  background:#ffffff;
+  @include boxSizing();
+  @include boxShadow();
+  @include boxRound8();
+  h1 {
+    margin-bottom:65px;
+    text-align:center;
+  }
+  .login__label {
+    padding-left:15px;
+    font-weight:bold;
+    color:$primaryColor;
+  }
+  .input {
+    width:330px;
+    height:45px;
+    padding:15px 20px;
+    margin-bottom:25px;
+    border-radius:35px;
+    border-color:#ebeef7;
+    background:$backgroundColor;
+    @include boxSizing();
+  }
+
+  .login__button input {
+    width:330px;
+    height:45px;
+    border-radius:45px;
+    border:0;
+    background:$primaryColor;
+    font-size:17px;
+    color:#ffffff;
+    &:hover {
+      @include transition();
+      -moz-box-shadow:inset 0px 0px 10px rgba(68,68,68,0.6);
+      -webkit-box-shadow:inset 0px 0px 10px rgba(68,68,68,0.6);
+      box-shadow:inset 0px 0px 10px rgba(68,68,68,0.6);
+    }
+  }
+}
+#menu_area {
+  width:1100px;
+  margin:70px auto 0;
+  text-align: center;
+  ul li {
+    display:inline-block;
+  
+  }
+  a {
+    display:block;
+    width:330px;
+    height:400px;
+    margin: 15px;        
+    .menu_box {
+      position: relative;
+      height: 400px;      
+      padding:30px;
+      background:#ffffff;      
+      @include boxSizing();
+      @include boxShadow();
+      @include boxRound8();      
+      h2 {
+        position: absolute;
+        top:230px;
+        left: 30px;
+        width: 270px;            
+        color: $subColor2;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;  
+        @include transition();      
+      }
+      p {
+        position: absolute;
+        top:270px;
+        left: 30px; 
+        width: 270px;    
+        color: $subColor1;
+        font-size: 18px;
+        text-align: left;
+        line-height: 130%;
+      }
+      &:hover h2 {
+        top: 220px;
+        color:$primaryColor;
+        @include transition();
+      }
+      &:hover h2.green {
+        top: 220px;
+        color:$tertiaryColor;
+        @include transition();
+      }
+      &:hover h2.pink {
+        top: 220px;
+        color:$warningColor;
+        @include transition();
+      }
+      &:hover p {
+        color: $subColor2;
+        @include transition();
+      }
+    }
+  }
+} //#menu_area 
+
+#container {
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px 0;
+  @include boxSizing();
+}
+#page__title {
+  overflow: hidden;
+  margin-bottom:15px;
+  h2 {    
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color:$subColor2;    
+  }
+  .breadcrumb {
+    overflow: hidden;
+    float: right;
+    margin-top: 10px;
+    li {
+      float:left;
+      padding: 0 4px;
+      color: $subColor1;
+      line-height: 120%;
+      &:after {
+        padding-left: 10px;
+        content: '>'
+      }
+      &:last-child:after {
+        content: ''
+      }
+    }
+  }
+}
+
+#search__area {
+  width: 330px;
+  padding: 30px 20px;
+  background: #ffffff;  
+  @include boxSizing();
+  @include boxRound8();
+  @include boxShadow();
+  h3 {
+    margin-bottom: 15px;
+    color:$subColor2;
+    font-size:20px;
+    font-weight: bold;     
+  }
+}
+
+
+
+@include pc-only {
+}
+
+
+@include pc-large {
+  #container {    
+    max-width: 1920px;
+    padding: 15px 0 0;    
+  }
+}
