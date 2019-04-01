@@ -88,8 +88,48 @@ header #header__box ul li .logout {
   font-size: 13px;
 }
 
+header #header__box ul li .logout:hover {
+  -webkit-transition: all 0.3s ease-in-out 0.1s;
+  transition: all 0.3s ease-in-out 0.1s;
+  background: #e5e5e5;
+  color: #b0b1b3;
+}
+
 .ptcolor {
   color: #407ceb;
+}
+
+.txr {
+  text-align: right !important;
+}
+
+.txc {
+  text-align: center !important;
+}
+
+.txl {
+  text-align: left !important;
+}
+
+input[type="text"],
+input[type="number"] {
+  display: inline-block;
+  height: 35px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #b0b1b3;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+.chked_area > label {
+  margin-right: 10px;
 }
 
 .pagenation {
@@ -141,6 +181,14 @@ header #header__box ul li .logout {
   margin-left: 8px;
 }
 
+[class^="btns__area"][class$="--center"] {
+  text-align: center;
+}
+
+[class^="btns__area"][class$="--center"] [class^="btn__"] {
+  margin-left: 8px;
+}
+
 [class^="btn__basic"] {
   display: inline-block;
   border-radius: 4px;
@@ -182,6 +230,88 @@ header #header__box ul li .logout {
   -webkit-transition: all 0.3s ease-in-out 0.1s;
   transition: all 0.3s ease-in-out 0.1s;
   background: #3772DE;
+}
+
+[class^="button__area"] {
+  clear: both;
+  width: 100%;
+  margin-top: 40px;
+}
+
+[class^="button__area"][class$="--center"] {
+  text-align: center;
+}
+
+[class^="button__area"][class$="--right"] {
+  text-align: right;
+}
+
+[class^="button__area"][class$="--left"] {
+  text-align: left;
+}
+
+[class^="button__"] {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  min-width: 130px;
+  padding: 0px 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class^="button__"][class$="__primary"] {
+  background: #407ceb;
+  color: #ffffff;
+}
+
+[class^="button__"][class$="__primary"]:hover {
+  background: #3772DE;
+}
+
+[class^="button__"][class$="__cancle"] {
+  background: #e5e5e5;
+  color: #808080;
+}
+
+[class^="button__"][class$="__cancle"]:hover {
+  background: #C7C7C7;
+}
+
+[class^="btn__small"] {
+  display: inline-block;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class^="btn__small"][class$="--primary"] {
+  background: #407ceb;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+[class^="btn__small"][class$="--secondary"] {
+  border: 1px solid #407ceb;
+  color: #407ceb;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+[class^="btn__small"][class$="--delete"] {
+  background: #b0b1b3;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 5px 10px;
 }
 
 @media screen and (min-width: 1201px) {

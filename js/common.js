@@ -9,4 +9,7 @@ $(function(){
   $('.popup__bottom .close').on('click',function(){
     $('#popup__wrap').hide();
   });  
+  $('#view_roi').on('click',function(){
+    $('#popup__wrap').fadeIn();
+  });
 });

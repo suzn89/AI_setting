@@ -8,6 +8,9 @@ $lightGray:#e5e5e5;
 $subColor1:#b0b1b3;
 $subColor2:#30333a;
 $primaryHover: #3772DE;
+$cancleHover: #C7C7C7;
+$inputBorder: #ebeef7;
+$titleColor:#808080;
 
 @mixin boxShadow {
   -moz-box-shadow:0px 3px 6px #cccccc;
@@ -99,6 +102,11 @@ header {
         border: 1px solid $lightGray;
         color:$lightGray;
         font-size:13px;
+        &:hover {
+          @include transition();
+          background:$lightGray;
+          color:$subColor1;
+        }
       }
     }
   }
@@ -106,6 +114,31 @@ header {
 
 .ptcolor {
   color:$primaryColor;
+}
+.txr {
+  text-align: right !important;
+}
+.txc {
+  text-align: center !important;
+}
+.txl {
+  text-align: left !important;
+}
+// 인풋 스타일
+input[type="text"],
+input[type="number"] {
+  display: inline-block;
+  height: 35px;  
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: $subColor1;
+  @include boxRound4();
+  @include boxSizing();    
+  border: 1px solid $inputBorder;
+}
+.chked_area > label {
+  margin-right: 10px;
 }
 
 // 페이지네이션
@@ -152,6 +185,12 @@ header {
       margin-left: 8px;
     }     
   }
+  &[class$="--center"] {
+    text-align: center;
+    [class^="btn__"] {
+      margin-left: 8px;
+    }     
+  }
 }
 [class^="btn__basic"] {
   display:inline-block;
@@ -186,6 +225,69 @@ header {
   }
 }
 
+[class^="button__area"] {
+  clear: both;
+  width: 100%;
+  margin-top: 40px;
+  &[class$="--center"] {
+    text-align: center;
+  }  
+  &[class$="--right"] {
+    text-align: right;
+  }  
+  &[class$="--left"] {
+    text-align: left;
+  }  
+}
+
+[class^="button__"] {
+  display:inline-block;
+  height: 50px;
+  line-height: 50px;
+  min-width: 130px;
+  padding: 0px 10px; 
+  font-size: 18px; 
+  @include boxRound4();
+  @include boxSizing();
+  &[class$="__primary"] {
+    background: $primaryColor;
+    color: #ffffff;
+    &:hover {
+      background: $primaryHover;
+    }
+  }
+  &[class$="__cancle"] {
+    background: $lightGray;
+    color: $titleColor;
+    &:hover {
+      background: $cancleHover;
+    }
+  }
+}
+
+[class^="btn__small"] {
+  display:inline-block;
+  @include boxRound4();
+  @include boxSizing();
+  &[class$="--primary"] {
+    background: $primaryColor;
+    color:#ffffff;
+    font-size: 13px;
+    padding: 5px 10px;        
+  }
+  &[class$="--secondary"] {
+    border: 1px solid $primaryColor;
+    color:$primaryColor;
+    font-size: 13px;
+    padding: 5px 10px;        
+  }
+  &[class$="--delete"] {
+    background: $subColor1;
+    color:#ffffff;
+    font-size: 13px;
+    padding: 5px 10px;        
+  }
+}
 
 @include pc-only {
   #header__box {
