@@ -28,5 +28,4 @@ $(function(){
       $('.box__list--hover').hide();
     }
   );
-
 });
