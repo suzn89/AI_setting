@@ -358,6 +358,99 @@
   margin-right: 5px;
 }
 
+.box__list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  background: #4a4a4a;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 11px;
+}
+
+.box__list h4 {
+  padding: 10px 10px;
+  color: #ffffff;
+}
+
+.box__list table {
+  width: 100%;
+}
+
+.box__list table th, .box__list table td {
+  padding: 0px 5px;
+}
+
+.box__list table th {
+  background: #f6f7fb;
+}
+
+.box__list table td {
+  background: #ffffff;
+}
+
+.box__list .btn__add {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+.box__list .btn__add:hover {
+  color: #ffb549;
+}
+
+.box__list .btn__add i {
+  font-size: 30px;
+}
+
+.box__list--hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  border-radius: 4px;
+}
+
+.box__list--hover h4 {
+  margin-top: 30px;
+}
+
+.box__list--hover ul li {
+  display: inline-block;
+}
+
+.box__list--hover ul li > a {
+  display: inline-block;
+  color: #ffffff;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.box__list--hover ul li > a[class$='--modify'] {
+  background: #407ceb;
+}
+
+.box__list--hover ul li > a[class$='--delete'] {
+  background: #b0b1b3;
+}
+
 [class^='popup__box'] {
   position: absolute;
   left: 50%;
@@ -398,6 +491,17 @@
   -moz-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #ebeef7;
+}
+
+[class^='popup__box'][class$='--style03'] {
+  width: 450px;
+  height: 310px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+[class^='popup__box'][class$='--style03'] .popup__content {
+  height: 180px;
 }
 
 [class^='popup__title'] {
@@ -501,6 +605,47 @@
 
 [class^='popup__content'] .check:hover {
   background: #646464;
+}
+
+#popup__wrap .content__top {
+  overflow: hidden;
+  padding: 10px 20px;
+  background: #f6f7fb;
+}
+
+#popup__wrap .content__top .popup__select {
+  float: left;
+  width: 160px;
+}
+
+#popup__wrap .content__top .popup__select + .popup__select {
+  margin-left: 10px;
+}
+
+#popup__wrap .content__top [class$='__select'] select {
+  width: 100%;
+  padding: 3px 5px;
+  font-size: 13px;
+  color: #b0b1b3;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#popup__wrap .content__top .btn__search {
+  display: inline-block;
+  width: 70px;
+  height: 29px;
+  margin-left: 10px;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+  background: #407ceb;
+  border-radius: 4px;
 }
 
 .roi_image {

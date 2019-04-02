@@ -321,8 +321,80 @@ $searchArea:330px;
       margin-right:5px;
     }
   }
+} 
+.box__list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  background: #4a4a4a;
+  @include boxRound4();
+  @include boxSizing();
+  font-size: 11px;
+  h4 {
+    padding: 10px 10px;
+    color: #ffffff;
+  }
+  table {
+    width: 100%;
+    th,td {
+      padding: 0px 5px;
+    }
+    th {
+      background: $backgroundColor;
+    }
+    td {
+      background:#ffffff;
+    }
+  }    
+  .btn__add {
+    display:inline-block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:30px;
+    height:30px;
+    color: #ffffff;
+    &:hover {
+      color:$secondaryColor;
+    }
+    i {
+      font-size: 30px;      
+      }
+    }    
 }
-
+.box__list--hover {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.8);
+  text-align: center;
+  @include boxRound4();
+  h4 {
+    margin-top: 30px;
+  }
+  ul li {
+    display:inline-block;
+  }
+  ul li > a {
+    display: inline-block;
+    color: #ffffff;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    @include boxRound4();
+    &[class$='--modify'] {
+      background: $primaryColor;
+    }
+    &[class$='--delete'] {
+      background: $subColor1;
+    }
+  }
+}
 // 레이어팝업
 [class^='popup__box'] {
   position:absolute;
@@ -353,6 +425,15 @@ $searchArea:330px;
         @include boxSizing();
         border:1px solid $inputBorder;
       }
+    }
+  }
+  &[class$='--style03'] {
+    width:450px;
+    height:310px;
+    background:#ffffff;
+    @include boxRound8();
+    .popup__content {
+      height:180px;          
     }
   }
 }
@@ -434,6 +515,41 @@ $searchArea:330px;
     }
   }
 }
+#popup__wrap {
+  .content__top {
+    overflow: hidden;
+    padding: 10px 20px;
+    background: $backgroundColor;
+    .popup__select {
+      float: left;
+      width: 160px;
+    }
+    .popup__select + .popup__select {
+      margin-left: 10px;
+    }
+    [class$='__select'] select {
+      width:100%;
+      padding:3px 5px;
+      font-size:13px;
+      color:$subColor1;
+      @include boxRound4();
+      @include boxSizing();
+      border:1px solid $inputBorder;
+    }
+    .btn__search {
+      display:inline-block;
+      width: 70px;
+      height: 29px;
+      margin-left: 10px;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+      background: $primaryColor;
+      @include boxRound4();      
+    }
+  }
+}
+
 .roi_image {
   width:100%;
   height:400px;

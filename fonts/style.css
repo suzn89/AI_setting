@@ -46,7 +46,6 @@
 }
 .icon-circle-plus:before {
   content: "\e93b";
-  color: #fff;
 }
 .icon-calendar:before {
   content: "\e93c";
