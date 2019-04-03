@@ -1,0 +1,225 @@
+body {
+  min-width: 900px;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+#wrap {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#wrap #image__info {
+  width: 100%;
+}
+
+#wrap #image__info .image__area {
+  width: 100%;
+  height: 500px;
+  background: #cccccc;
+}
+
+#wrap #image__info .image__pointer {
+  overflow: hidden;
+  padding: 10px 20px;
+  line-height: 35px;
+  border-bottom: 1px solid #b0b1b3;
+  background: #ffffff;
+}
+
+#wrap #image__info .image__pointer .location {
+  float: left;
+  font-weight: 500;
+}
+
+#wrap #image__info .image__pointer .location span {
+  font-weight: normal;
+  color: #30333a;
+}
+
+#input__area {
+  padding: 15px 20px;
+  background: #f6f7fb;
+}
+
+#input__area span {
+  display: inline-block;
+}
+
+#input__area [class$='--select'] select {
+  width: 210px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#input__area input[type="text"] {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#input__area [class$='--text01'] {
+  display: inline-block;
+  width: 540px;
+}
+
+#input__area ul {
+  overflow: hidden;
+}
+
+#input__area ul li {
+  float: left;
+  width: 25%;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#input__area ul li .__title {
+  display: block;
+  margin-top: 10px;
+  color: #407ceb;
+}
+
+#input__area ul li .__input {
+  display: block;
+}
+
+#input__area ul li .__input input[type="radio"] {
+  margin-right: 5px;
+}
+
+#input__area ul li .__input input[type="radio"] + label {
+  margin-right: 20px;
+}
+
+#input__area ul li .__input input[type="text"] {
+  width: 93%;
+  padding: 7px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#roi_list {
+  clear: both;
+  width: 100%;
+  padding: 10px 0px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#roi_list table {
+  width: 100%;
+  border-top: 2px solid #407ceb;
+}
+
+#roi_list table th {
+  background: #f6f7fb;
+  padding: 5px;
+  border-bottom: 1px solid #ebeef7;
+}
+
+#roi_list table td {
+  padding: 5px;
+  border-bottom: 1px solid #ebeef7;
+}
+
+#roi_list table [class$='--select'] select {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#roi_list table .position_area {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ebeef7;
+}
+
+#roi_list table .button__area [class$='modify'] {
+  background: #e5e5e5;
+}
+
+#roi_list table .button__area [class$='delete'] {
+  background: #b0b1b3;
+  color: #ffffff;
+}
+
+[class^='button__'] {
+  display: inline-block;
+  min-width: 80px;
+  height: 35px;
+  padding: 0 10px;
+  line-height: 35px;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class^='button__'] [class$='primary'] {
+  background: #407ceb;
+  color: #ffffff;
+}
+
+[class^='button__'] [class$='primary']:hover {
+  background: #3772DE;
+}
+
+[class^='button__'] [class$='secondary'] {
+  border: 1px solid #407ceb;
+  color: #407ceb;
+}
+
+[class^='button__'] [class$='secondary']:hover {
+  background: #3772DE;
+  color: #ffffff;
+}
+
+.button__area--right {
+  float: right;
+}
+/*# sourceMappingURL=roi.css.map */

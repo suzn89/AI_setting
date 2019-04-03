@@ -290,8 +290,7 @@ input[type="number"] {
 }
 
 @include pc-only {
-  #header__box {
-    background: #cccccc;    
+  #header__box {    
     margin:0 auto;    
   }
 }
@@ -300,7 +299,7 @@ input[type="number"] {
 @include pc-large {
   header {
     #header__box {
-      background: #ffb549;   
+         
       max-width: 1920px; 
       margin:0 auto;
       padding:20px 0;

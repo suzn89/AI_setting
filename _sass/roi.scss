@@ -1,0 +1,207 @@
+@import 'mixin.scss';
+$primaryColor:#407ceb;
+$primaryHover: #3772DE;
+$secondaryColor:#ffb549;
+$secondaryHover:#FF9F3E;
+$tertiaryColor:#58c9b9;
+$warningColor:#ff5f7c;
+$backgroundColor:#f6f7fb;
+$lightGray:#e5e5e5;
+$subColor1:#b0b1b3;
+$subColor2:#30333a;
+$titleColor:#808080;
+$inputBorder:#ebeef7;
+$searchArea:330px;
+@mixin iconFont {
+  font-family:'aibox';
+}
+@mixin boxShadow {
+  -moz-box-shadow:0px 5px 10px #b0b1b3;
+  -webkit-box-shadow:0px 5px 10px #b0b1b3;
+  box-shadow:0px 5px 10px #b0b1b3;
+}
+@mixin boxSizing {
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-sizing:border-box;
+  box-sizing:border-box;
+}
+@mixin boxRound8 {
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
+@mixin boxRound4 {
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+@mixin transition {
+  transition:all 0.3s ease-in-out 0.1s;
+}
+
+// ROi 설정 관련 (윈도우팝업)
+body {
+  min-width: 900px;
+  overflow-x:auto;
+  overflow-y:scroll;
+}
+#wrap {
+  width: 900px;
+  margin: 0 auto;
+  #image__info {
+    width: 100%;
+    .image__area {
+      width: 100%;
+      height: 500px;
+      background: #cccccc;
+    }
+    .image__pointer {
+      overflow: hidden;
+      padding: 10px 20px;
+      line-height: 35px;
+      border-bottom: 1px solid $subColor1;      
+      background: #ffffff;
+      .location {
+        float: left;
+        font-weight: 500;
+        span {
+          font-weight: normal;
+          color: $subColor2;
+        }
+      }
+    }
+  }  
+}
+#input__area {
+  padding: 15px 20px;
+  background: $backgroundColor;
+  span {
+    display: inline-block;
+  }
+  [class$='--select'] select {
+    width:210px;
+    padding:6px 10px;
+    font-size:13px;    
+    @include boxRound4();
+    @include boxSizing();
+    border:1px solid $inputBorder;
+  }
+  input[type="text"] {
+    width:100%;
+    padding: 7px 10px;
+    font-size: 13px;
+    @include boxRound4();
+    @include boxSizing();
+    border:1px solid $inputBorder;
+  }
+  [class$='--text01'] {
+    display: inline-block;    
+    width: 540px;
+  }
+  ul {
+    overflow: hidden;
+    li {
+      float:left;
+      width: 25%;
+      @include boxSizing();
+      .__title {
+        display:block;     
+        margin-top: 10px;    
+        color: $primaryColor;     
+      }
+      .__input {     
+        display: block;   
+        input[type="radio"] {
+          margin-right: 5px;
+        }
+        input[type="radio"] + label {
+          margin-right: 20px;
+        }
+        input[type="text"] {
+          width:93%;
+          padding: 7px 8px;
+          font-size: 13px;
+          @include boxRound4();
+          @include boxSizing();
+          border:1px solid $inputBorder;
+        }
+      }
+    }
+  }
+}
+#roi_list {
+  clear: both;
+  width: 100%;
+  padding: 10px 0px;
+  @include boxSizing();
+  table {
+    width: 100%;
+    border-top: 2px solid $primaryColor;
+    th {
+      background: $backgroundColor;
+      padding: 5px;
+      border-bottom: 1px solid $inputBorder;
+    }
+    td {
+      padding: 5px;
+      border-bottom: 1px solid $inputBorder;
+    }
+    [class$='--select'] select {
+      width:100%;
+      padding:6px 10px;
+      font-size:13px;    
+      @include boxRound4();
+      @include boxSizing();
+      border:1px solid $inputBorder;
+    }
+    .position_area {
+      display: block;
+      width:100%;
+      height: 35px;
+      padding:6px 10px;
+      font-size:13px;    
+      @include boxRound4();
+      @include boxSizing();
+      border:1px solid $inputBorder;
+    }
+    .button__area {
+      [class$='modify'] {
+        background: $lightGray;
+      }
+      [class$='delete'] {
+        background: $subColor1;
+        color: #ffffff;
+      }
+    }
+  }
+}
+[class^='button__'] {
+  display: inline-block;
+  min-width: 80px;
+  height: 35px;
+  padding: 0 10px;
+  line-height: 35px; 
+  @include boxRound4();
+  @include boxSizing();
+  [class$='primary'] {
+    background: $primaryColor;
+    color: #ffffff;
+    &:hover {
+      background: $primaryHover;
+    }
+  }
+  [class$='secondary'] {
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    &:hover {
+      background: $primaryHover;
+      color: #ffffff;
+    }
+  }
+}
+
+.button__area--right {
+  float: right;
+}

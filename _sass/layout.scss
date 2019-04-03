@@ -733,6 +733,8 @@ $searchArea:330px;
   background: $primaryColor;      
 } 
 
+
+
 @include pc-only {
   .view__input {
     float:left;

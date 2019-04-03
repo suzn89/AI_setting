@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/roi.css">  
+</head>
+<body>
+  <div id="wrap">
+    <div id="image__info">
+      <div class="image__area">
+
+      </div>
+      <div class="image__pointer">
+        <p class="location">포인터위치 <span>(-5, 413)</span></p>
+        <span class="button__area--right">
+          <button type="button" class="button__primary">ROI 지우기</button>
+        </span>
+      </div>
+    </div> <!-- // image__info -->   
+    <div id="input__area">
+      <span class="input__box--select">
+        <select name="" id="" title="해당항목선택">
+          <option value="">금지방향</option>
+          <option value="">침입</option>
+          <option value="">배회</option>
+          <option value="">화재</option>
+          <option value="">쓰러짐</option>
+        </select> 
+      </span>  
+      <span class="input__box--text01">
+        <input type="text" name="" id="" class="ipt_text">
+      </span>
+      <span class="button__area--right">
+        <button type="button" class="button__secondary">추가</button>
+      </span>    
+      <ul>
+        <li>
+          <span class="__title">알고리즘 유형</span>
+          <span class="__input">
+            <input type="radio" name="radio1" id="radio1" checked>
+            <label for="radio1">AI</label>
+            <input type="radio" name="radio1" id="radio1" checked>
+            <label for="radio1">딥러닝</label>
+          </span>
+        </li>
+        <li>
+          <span class="__title">오브젝트 최대 너비</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">오브젝트 최소 높이</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">오브젝트 최대 높이</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">민감도</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">민감도 최소</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">민감도 최대</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">윤곽선 최소</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">윤곽선 최대</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+        <li>
+          <span class="__title">적용시간</span>
+          <span class="__input">
+            <input type="text" name="" id="" class="ipt_text">
+          </span>
+        </li>
+      </ul>
+    </div> <!-- // input_area -->
+    
+    <div id="roi_list">
+      <table>
+        <colgroup>
+          <col width="80px">
+          <col width="200px">
+          <col width="*">
+          <col width="200px">
+        </colgroup>
+        <tr>
+          <th>ROI 1</th>
+          <td>
+            <span class="input__box--select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">금지방향</option>
+                <option value="">침입</option>
+                <option value="">배회</option>
+                <option value="">화재</option>
+                <option value="">쓰러짐</option>
+              </select> 
+            </span>
+          </td>
+          <td>
+            <span class="position_area"></span>
+          </td>
+          <td>
+            <span class="button__area">
+              <button type="button" class="button__modify">수정</button>
+              <button type="button" class="button__delete">삭제</button>
+            </span>   
+          </td>
+        </tr>
+        <tr>
+          <th>ROI 1</th>
+          <td>
+            <span class="input__box--select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">금지방향</option>
+                <option value="">침입</option>
+                <option value="">배회</option>
+                <option value="">화재</option>
+                <option value="">쓰러짐</option>
+              </select> 
+            </span>
+          </td>
+          <td>
+            <span class="position_area"></span>
+          </td>
+          <td>
+            <span class="button__area">
+              <button type="button" class="button__modify">수정</button>
+              <button type="button" class="button__delete">삭제</button>
+            </span>   
+          </td>
+        </tr>
+        <tr>
+          <th>ROI 1</th>
+          <td>
+            <span class="input__box--select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">금지방향</option>
+                <option value="">침입</option>
+                <option value="">배회</option>
+                <option value="">화재</option>
+                <option value="">쓰러짐</option>
+              </select> 
+            </span>
+          </td>
+          <td>
+            <span class="position_area"></span>
+          </td>
+          <td>
+            <span class="button__area">
+              <button type="button" class="button__modify">수정</button>
+              <button type="button" class="button__delete">삭제</button>
+            </span>   
+          </td>
+        </tr>
+        <tr>
+          <th>ROI 1</th>
+          <td>
+            <span class="input__box--select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">금지방향</option>
+                <option value="">침입</option>
+                <option value="">배회</option>
+                <option value="">화재</option>
+                <option value="">쓰러짐</option>
+              </select> 
+            </span>
+          </td>
+          <td>
+            <span class="position_area"></span>
+          </td>
+          <td>
+            <span class="button__area">
+              <button type="button" class="button__modify">수정</button>
+              <button type="button" class="button__delete">삭제</button>
+            </span>   
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
