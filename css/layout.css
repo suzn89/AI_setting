@@ -102,8 +102,6 @@
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  transition: all 0.3s ease-in-out 0.1s;
 }
 
 #menu_area a .menu_box p {
@@ -117,31 +115,38 @@
   line-height: 130%;
 }
 
+#menu_area a .menu_box:hover {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 #menu_area a .menu_box:hover h2 {
-  top: 220px;
-  color: #407ceb;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  transition: all 0.3s ease-in-out 0.1s;
-}
-
-#menu_area a .menu_box:hover h2.green {
-  top: 220px;
-  color: #58c9b9;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  transition: all 0.3s ease-in-out 0.1s;
-}
-
-#menu_area a .menu_box:hover h2.pink {
-  top: 220px;
-  color: #ff5f7c;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  transition: all 0.3s ease-in-out 0.1s;
+  color: #ffffff;
 }
 
 #menu_area a .menu_box:hover p {
-  color: #30333a;
-  -webkit-transition: all 0.3s ease-in-out 0.1s;
-  transition: all 0.3s ease-in-out 0.1s;
+  color: #ffffff;
+}
+
+#menu_area [class$='blue'] .menu_box:hover {
+  -webkit-transition: all 0.5s ease-in-out 0.01s;
+  transition: all 0.5s ease-in-out 0.01s;
+  background: #407ceb;
+  color: #ffffff;
+}
+
+#menu_area [class$='green'] .menu_box:hover {
+  -webkit-transition: all 0.5s ease-in-out 0.01s;
+  transition: all 0.5s ease-in-out 0.01s;
+  background: #58c9b9;
+  color: #ffffff;
+}
+
+#menu_area [class$='red'] .menu_box:hover {
+  -webkit-transition: all 0.5s ease-in-out 0.01s;
+  transition: all 0.5s ease-in-out 0.01s;
+  background: #fe8c99;
+  color: #ffffff;
 }
 
 #container {
@@ -912,6 +917,28 @@
   height: 10px;
   border-radius: 50%;
   background: #407ceb;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
 }
 
 @media screen and (min-width: 1201px) {

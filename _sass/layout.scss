@@ -40,6 +40,9 @@ $searchArea:330px;
 @mixin transition {
   transition:all 0.3s ease-in-out 0.1s;
 }
+@mixin transition1 {
+  transition:all 0.5s ease-in-out 0.01s;
+}
 
 #login__box {
   position:absolute;
@@ -94,13 +97,14 @@ $searchArea:330px;
   margin:70px auto 0;
   text-align:center;
   ul li {
-    display:inline-block;
+    display:inline-block;   
   }
   a {
     display:block;
     width:330px;
     height:400px;
     margin:15px;
+    
     .menu_box {
       position:relative;
       height:400px;
@@ -109,6 +113,7 @@ $searchArea:330px;
       @include boxSizing();
       @include boxShadow();
       @include boxRound8();
+      
       h2 {
         position:absolute;
         top:230px;
@@ -118,7 +123,6 @@ $searchArea:330px;
         font-size:24px;
         font-weight:bold;
         text-align:left;
-        @include transition();
       }
       p {
         position:absolute;
@@ -129,27 +133,40 @@ $searchArea:330px;
         font-size:18px;
         text-align:left;
         line-height:130%;
-      }
-      &:hover h2 {
-        top:220px;
-        color:$primaryColor;
-        @include transition();
-      }
-      &:hover h2.green {
-        top:220px;
-        color:$tertiaryColor;
-        @include transition();
-      }
-      &:hover h2.pink {
-        top:220px;
-        color:$warningColor;
-        @include transition();
-      }
-      &:hover p {
-        color:$subColor2;
-        @include transition();
-      }
+      }      
+      &:hover {
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        h2 {
+          color: #ffffff;          
+        }
+        p {
+          color: #ffffff;
+        }
+      }      
+      
     }
+  }
+  [class$='blue'] .menu_box {
+    &:hover {
+      @include transition1();      
+      background: $primaryColor;
+      color: #ffffff;
+    }   
+  }
+  [class$='green'] .menu_box {
+    &:hover {
+      @include transition1();
+      background: #58c9b9;
+      color: #ffffff;
+    }   
+  }
+  [class$='red'] .menu_box {
+    &:hover {
+      @include transition1();
+      background: #fe8c99;
+      color: #ffffff;
+    }   
   }
 } //#menu_area 
 
@@ -777,7 +794,26 @@ $searchArea:330px;
   background: $primaryColor;      
 } 
 
-
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
 
 @include pc-only {
   .view__input {
@@ -794,6 +830,7 @@ $searchArea:330px;
     }
   }
 }
+
 
 
 @include pc-large {
