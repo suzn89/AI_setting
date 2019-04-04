@@ -497,6 +497,56 @@
   background: #b0b1b3;
 }
 
+#license__wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 640px;
+  padding: 20px 24px;
+  background: #ffffff;
+  text-align: center;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 5px 10px #b0b1b3;
+  box-shadow: 0px 5px 10px #b0b1b3;
+}
+
+#license__wrap h4 {
+  margin-bottom: 20px;
+  text-align: left;
+  color: #30333a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#license__wrap p {
+  color: #808080;
+  font-size: 16px;
+  text-align: left;
+}
+
+#license__wrap .__input {
+  margin-top: 30px;
+}
+
+#license__wrap .__input input[type='text'] {
+  width: 100px;
+  display: inline-block;
+}
+
+#license__wrap .__input span + span:before {
+  content: '-';
+  font-size: 20px;
+  color: #808080;
+  padding-right: 5px;
+}
+
 [class^='popup__box'] {
   position: absolute;
   left: 50%;
