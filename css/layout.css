@@ -61,6 +61,13 @@
   box-shadow: inset 0px 0px 10px rgba(68, 68, 68, 0.6);
 }
 
+.copyr {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  color: #b0b1b3;
+}
+
 #menu_area {
   width: 1100px;
   margin: 70px auto 0;
@@ -78,57 +85,12 @@
   margin: 15px;
 }
 
-#menu_area a .menu_box {
+#menu_area ul li > span {
+  display: block;
   position: relative;
+  width: 330px;
   height: 400px;
-  padding: 30px;
-  background: #ffffff;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0px 5px 10px #b0b1b3;
-  box-shadow: 0px 5px 10px #b0b1b3;
-  border-radius: 8px;
-}
-
-#menu_area a .menu_box h2 {
-  position: absolute;
-  top: 230px;
-  left: 30px;
-  width: 270px;
-  color: #30333a;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-}
-
-#menu_area a .menu_box p {
-  position: absolute;
-  top: 270px;
-  left: 30px;
-  width: 270px;
-  color: #b0b1b3;
-  font-size: 18px;
-  text-align: left;
-  line-height: 130%;
-}
-
-#menu_area a .menu_box:hover {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-#menu_area a .menu_box:hover h2 {
-  color: #ffffff;
-  top: 210px;
-  -webkit-transition: all 0.5s ease-in-out 0.1s;
-  transition: all 0.5s ease-in-out 0.1s;
-}
-
-#menu_area a .menu_box:hover p {
-  color: #ffffff;
+  margin: 15px;
 }
 
 #menu_area [class$='blue'] .menu_box:hover {
@@ -150,6 +112,98 @@
   transition: all 0.5s ease-in-out 0.01s;
   background: #fe8c99;
   color: #ffffff;
+}
+
+#menu_area .menu_box {
+  display: block;
+  position: relative;
+  height: 400px;
+  padding: 30px;
+  background: #ffffff;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 5px 10px #b0b1b3;
+  box-shadow: 0px 5px 10px #b0b1b3;
+  border-radius: 8px;
+}
+
+#menu_area .menu_box h2 {
+  position: absolute;
+  top: 230px;
+  left: 30px;
+  width: 270px;
+  color: #30333a;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#menu_area .menu_box p {
+  position: absolute;
+  top: 270px;
+  left: 30px;
+  width: 270px;
+  color: #b0b1b3;
+  font-size: 18px;
+  text-align: left;
+  line-height: 130%;
+}
+
+#menu_area .menu_box:hover {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#menu_area .menu_box:hover h2 {
+  color: #ffffff;
+  top: 210px;
+  -webkit-transition: all 0.5s ease-in-out 0.1s;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+#menu_area .menu_box:hover p {
+  color: #ffffff;
+}
+
+#menu_area .hover_menu {
+  position: absolute;
+  bottom: 30px;
+  width: 270px;
+}
+
+#menu_area .hover_menu ul {
+  width: 100%;
+}
+
+#menu_area .hover_menu ul li {
+  float: left;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#menu_area .hover_menu ul li a {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  border: 1px solid #fe8c99;
+  font-size: 13px;
+  color: #fe8c99;
+  background: #ffffff;
+  border-radius: 4px;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menu_area .hover_menu ul li a:hover {
+  color: #f05e6f;
 }
 
 #container {
