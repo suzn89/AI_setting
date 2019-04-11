@@ -28,4 +28,19 @@ $(function(){
       $('.box__list--hover').hide();
     }
   );
+
+  // 좌측 사이드 패널
+  
+  panelOpen = true;
+  $('.btn__panel').click(function (e) { 
+    e.preventDefault();
+    if (panelOpen) {
+      $(this).addClass('open');
+      $('#search__area').stop(true,true).animate({'margin-left':'-350px'},500,function(){panelOpen=false;});      
+    } else {      
+      $(this).removeClass('open');
+      $('#search__area').stop(true,true).animate({'margin-left':'0px'},500,function(){panelOpen=true;});
+    }
+  });
+  
 });

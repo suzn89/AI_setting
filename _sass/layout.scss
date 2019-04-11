@@ -248,10 +248,21 @@ $searchArea:330px;
     }
   }
 }
-
+.search_area_hidden {
+  position: absolute;
+  width: 335px;
+  height: 700px;  
+  background: $backgroundColor;
+  z-index: 200;
+  margin-left: -350px;
+  margin-top: -20px;
+}
 #search__area {
+  position: relative;
   float:left;
   width:330px;
+  margin-right: 20px;
+  margin-left: 0px;
   padding:20px 20px;
   background:#ffffff;
   @include boxSizing();
@@ -271,7 +282,30 @@ $searchArea:330px;
   [class^='search__'] {
     margin-top:15px;
   }
+  .btn__panel {
+    position: absolute;
+    right: -38px;        
+    top:50%;
+    transform:translate(-50%, -50%);
+    width: 25px;
+    height: 80px;    
+    background: #ffffff;  
+    -moz-box-shadow:4px 0px 4px -1px #DEDEDE;
+    -webkit-box-shadow:4px 0px 4px -1px #DEDEDE;
+    box-shadow:4px 0px 4px -1px #DEDEDE;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    &:after {
+      content: '<';
+      color: #8D8D8D;
+    }
+  }
+  .open:after {
+    content: '>';
+    color: #8D8D8D;
+  }   
 }
+
 .search__select {
   select {
     width:100%;
@@ -339,7 +373,7 @@ $searchArea:330px;
   width:cal(100% - #{300px});
   min-height:600px;
   padding:20px;
-  margin-left:350px;
+  // margin-left:350px; 좌측슬라이드 변경으로 사용안함
   background:#ffffff;
   @include boxSizing();
   @include boxRound8();
