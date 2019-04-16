@@ -259,6 +259,7 @@
   z-index: 200;
   margin-left: -350px;
   margin-top: -20px;
+  z-index: 100;
 }
 
 #search__area {
